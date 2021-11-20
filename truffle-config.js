@@ -1,7 +1,6 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const fs = require('fs');
-const mnemonic = '227144825e67a09f5eb1bd36cb318985c7ac196ddc229664a3ef8e2400b03a59';
-// const mnemonic = '227144825e67a09f5eb1bd36cb318985c7ac196ddc229664a3ef8e2400b03a59';
+const mnemonic = '';
 
 module.exports = {
   networks: {
@@ -13,7 +12,7 @@ module.exports = {
     bsctestnet: {
       provider: () => new HDWalletProvider(mnemonic, `https://data-seed-prebsc-1-s1.binance.org:8545`),
       network_id: 97,
-      confirmations: 10,
+      confirmations: 5,
       timeoutBlocks: 200,
       skipDryRun: true
     },
@@ -38,7 +37,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: "^0.8.0", // A version or constraint - Ex. "^0.5.0"
+      version: "^0.4.26", // A version or constraint - Ex. "^0.5.0"
     },
     // settings: {
     //   optimizer: {
@@ -51,8 +50,8 @@ module.exports = {
     'truffle-plugin-verify'
   ],
   api_keys: {
-    // bscscan: 'QC4UPPIN4JPDA4YAY1PAS46RGNJUYFHKCM',
+    bscscan: 'QC4UPPIN4JPDA4YAY1PAS46RGNJUYFHKCM',
     // bsctestscan: 'NPIT4183DK8BMGVZDT9C4R14S1QMEHIT88',
-    etherscan: 'QNH5TIIYA5GXN2TT326FFBMSSY3H5B24XX'
+    // etherscan: 'QNH5TIIYA5GXN2TT326FFBMSSY3H5B24XX'
   },
 }
